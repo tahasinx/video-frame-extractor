@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Video Frame Extractor</title>
+  <link rel="icon" href="assets/icon.svg">
   <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -13,12 +13,23 @@
 <body>
 
   <h2>Video Frame Extractor</h2>
+  <div id="dropArea" class="drop-area">
+    <p>Drag & drop a video file here, or <label for="videoInput" class="upload-label">browse</label> to select</p>
+    <input type="file" id="videoInput" accept="video/*" style="display:none;">
+  </div>
+  <div id="uploadFeedback" class="upload-feedback"></div>
   <div class="controls">
-    <input type="file" id="videoInput" accept="video/*">
-
     <label>Start (s): <input type="number" id="startTime" placeholder="0" min="0"></label>
     <label>End (s): <input type="number" id="endTime" placeholder="leave blank" min="0"></label>
     <button id="analyzeBtn">Analyze Video</button>
+  </div>
+  <div id="inputFeedback" class="input-feedback"></div>
+  <div id="analyzingOverlay" class="analyzing-overlay" style="display:none;">
+    <div class="analyzing-content">
+      <div class="spinner"></div>
+      <span>Analyzing...</span>
+      <button id="stopBtn" class="stop-btn">Stop</button>
+    </div>
   </div>
 
   <div id="frames" class="gallery"></div>
