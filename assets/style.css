@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    background : #f4f7f9;
+    padding    : 20px;
+    color      : #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+input[type="number"],
+input[type="file"] {
+    margin-right: 10px;
+}
+
+#analyzeBtn {
+    padding         : 8px 16px;
+    font-size       : 1rem;
+    background-color: #007bff;
+    color           : white;
+    border          : none;
+    border-radius   : 4px;
+    cursor          : pointer;
+}
+
+#analyzeBtn:hover {
+    background-color: #0056b3;
+}
+
+#frames {
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap                  : 10px;
+}
+
+#frames a {
+    display      : block;
+    overflow     : hidden;
+    border       : 2px solid #ddd;
+    border-radius: 4px;
+}
+
+#frames img {
+    display   : block;
+    width     : 100%;
+    height    : auto;
+    transition: transform 0.3s;
+}
+
+#frames img:hover {
+    transform: scale(1.05);
+}
+
+canvas,
+video {
+    display: none;
+}

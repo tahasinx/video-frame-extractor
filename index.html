@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Video Frame Extractor</title>
+  <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <h2>Video Frame Extractor</h2>
+  <div class="controls">
+    <input type="file" id="videoInput" accept="video/*">
+
+    <label>Start (s): <input type="number" id="startTime" placeholder="0" min="0"></label>
+    <label>End (s): <input type="number" id="endTime" placeholder="leave blank" min="0"></label>
+    <button id="analyzeBtn">Analyze Video</button>
+  </div>
+
+  <div id="frames" class="gallery"></div>
+
+  <video id="video" crossorigin="anonymous"></video>
+  <canvas id="canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+  <script src="assets/script.js"></script>
+
+</body>
+
+</html>
